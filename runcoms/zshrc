@@ -4,6 +4,19 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+eval $(hub alias -s)
+
+export GOPATH=~/go
+export PATH=$GOPATH/bin:$PATH
+
+export PATH=~/.npm/bin:$PATH
+
+alias vi=vim
+alias view='vim -R'
+
+alias kube="docker run --rm -i --net=host openshift/origin:latest kube"
+alias kubecl="docker run --rm -i openshift/origin:latest kube --host=10.245.1.2:7080"
+alias openshift="docker run --rm -i --net=host openshift/origin:latest"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -15,4 +28,6 @@ autoload -Uz promptinit
 promptinit
 prompt agnoster
 
-eval $(hub alias -s)
+
+# added by travis gem
+[ -f /home/jdyson/.travis/travis.sh ] && source /home/jdyson/.travis/travis.sh
