@@ -60,6 +60,7 @@ alias mvntc='mvn tomcat:run'
 alias mvnjetty='mvn jetty:run'
 alias mvndt='mvn dependency:tree'
 alias mvns='mvn site'
+alias mvnq="mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart"
 
 function listMavenCompletions { 
      reply=(
