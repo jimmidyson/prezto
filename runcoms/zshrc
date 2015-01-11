@@ -28,6 +28,10 @@ autoload -Uz promptinit
 promptinit
 prompt agnoster
 
+export EDITOR=vi
 
 # added by travis gem
 [ -f /home/jdyson/.travis/travis.sh ] && source /home/jdyson/.travis/travis.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/home/jdyson/.gvm/bin/gvm-init.sh" ]] && source "/home/jdyson/.gvm/bin/gvm-init.sh"
