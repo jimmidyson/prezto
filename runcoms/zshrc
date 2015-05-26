@@ -9,14 +9,13 @@ eval $(hub alias -s)
 export GOPATH=~/go
 export PATH=$GOPATH/bin:$PATH
 
+#export IOJSPATH=~/apps/iojs-v1.4.1-linux-x64/
+#export PATH=$IOJSPATH/bin:$PATH
+
 export PATH=~/.npm/bin:$PATH
 
 alias vi=vim
 alias view='vim -R'
-
-alias kube="docker run --rm -i --net=host openshift/origin:latest kube"
-alias kubecl="docker run --rm -i openshift/origin:latest kube --host=10.245.1.2:7080"
-alias openshift="docker run --rm -i --net=host openshift/origin:latest"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -35,3 +34,7 @@ export EDITOR=vi
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/home/jdyson/.gvm/bin/gvm-init.sh" ]] && source "/home/jdyson/.gvm/bin/gvm-init.sh"
+
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
