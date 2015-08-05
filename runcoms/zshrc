@@ -27,7 +27,7 @@ autoload -Uz promptinit
 promptinit
 prompt agnoster
 
-export EDITOR=vi
+export EDITOR=vim
 
 # added by travis gem
 [ -f /home/jdyson/.travis/travis.sh ] && source /home/jdyson/.travis/travis.sh
@@ -35,6 +35,18 @@ export EDITOR=vi
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/home/jdyson/.gvm/bin/gvm-init.sh" ]] && source "/home/jdyson/.gvm/bin/gvm-init.sh"
 
+export NVM_DIR="/home/jdyson/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+source /home/jdyson/.gulp-autocompletion-zsh/gulp-autocompletion.zsh
+
+bindkey '^R' history-incremental-pattern-search-backward
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/jdyson/apps/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/home/jdyson/apps/google-cloud-sdk/completion.zsh.inc'
