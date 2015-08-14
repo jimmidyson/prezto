@@ -16,6 +16,7 @@ export PATH=~/.npm/bin:$PATH
 
 alias vi=vim
 alias view='vim -R'
+alias grif='gca --fixup HEAD && gri --autosquash HEAD~2'
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
