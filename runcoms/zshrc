@@ -43,7 +43,6 @@ source '/home/jdyson/apps/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/home/jdyson/apps/google-cloud-sdk/completion.zsh.inc'
-[[ -s "/home/jdyson/.gvm/scripts/gvm" ]] && source "/home/jdyson/.gvm/scripts/gvm"
 
 autoload -U bashcompinit
 bashcompinit
@@ -52,3 +51,9 @@ source /home/jdyson/.zprezto/modules/completion/external/src/kubectl
 printcert() {
   echo | openssl s_client -connect $1 2>&1 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | openssl x509 -text
 }
+
+alias record='recordmydesktop -pause-shortcut Control+Shift+p -stop-shortcut Control+Shift+s -delay 5'
+
+export PATH=$PATH:/usr/local/go/bin
+
+alias letsencrypt='docker run -it --rm --name letsencrypt -v "/etc/letsencrypt:/etc/letsencrypt" -v "/var/lib/letsencrypt:/var/lib/letsencrypt" quay.io/letsencrypt/letsencrypt:latest'
